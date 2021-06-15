@@ -4,7 +4,6 @@ class StatesController < ApplicationController
   # GET /states
   def index
     @states = State.all
-
     render json: @states
   end
 

@@ -3,8 +3,12 @@ class SightsController < ApplicationController
 
   # GET /sights
   def index
+    if params[:state_id]
+      @state = State.find(params[:state_id])
+      @sights = @state.sights
+    else
     @sights = Sight.all
-
+    end
     render json: @sights
   end
 
