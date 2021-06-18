@@ -40,6 +40,7 @@ class SightsController < ApplicationController
   # DELETE /sights/1
   def destroy
     @sight.destroy
+    render json: @sights
   end
 
   private
