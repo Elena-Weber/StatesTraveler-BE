@@ -9,12 +9,13 @@ class SightsController < ApplicationController
     else
     @sights = Sight.all
     end
-    render json: @sights
+    render json: @sights.to_json(except: [:created_at, :updated_at], include: {state: {only: [:id, :name]}})
+    #render json: Sight.array_to_json
   end
 
   # GET /sights/1
   def show
-    render json: @sight
+    render json: @sight.to_json(except: [:created_at, :updated_at], include: {state: {only: [:id, :name]}})
   end
 
   # POST /sights
