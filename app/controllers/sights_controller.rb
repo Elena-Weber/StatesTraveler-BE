@@ -10,7 +10,7 @@ class SightsController < ApplicationController
     @sights = Sight.all
     end
     render json: @sights.to_json(except: [:created_at, :updated_at], include: {state: {only: [:id, :name]}})
-    #render json: Sight.array_to_json
+    #render json: Sight.array_to_json   <- another method to achieve this
   end
 
   # GET /sights/1
@@ -23,7 +23,7 @@ class SightsController < ApplicationController
     @sight = Sight.new(sight_params)
 
     if @sight.save
-      render json: @sight, status: :created, location: @sight
+      render json: @sight.to_json(except: [:created_at, :updated_at], include: {state: {only: [:id, :name]}}), status: :created, location: @sight
     else
       render json: @sight.errors, status: :unprocessable_entity
     end
