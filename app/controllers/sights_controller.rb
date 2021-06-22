@@ -44,6 +44,11 @@ class SightsController < ApplicationController
     render json: @sights
   end
 
+  def mostliked
+    @mostliked = Sight.all.sort_by { |most| most.likes }.last
+    render json: @mostliked
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sight
