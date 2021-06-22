@@ -1,6 +1,8 @@
 This is Back End for the project States Traveler.
 The Front End is here: https://github.com/Elena-Weber/StatesTraveler-FE
 
+This is a one page application.
+
 Installation
 
 Fork the project's back end from https://github.com/Elena-Weber/StatesTraveler-BE. To install all the gems necessary, execute in your terminal:
