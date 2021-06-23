@@ -1,7 +1,7 @@
 class Sight < ApplicationRecord
   belongs_to :state
 
-  validates :name, :image, :details, presence: :true
+  #validates :name, :image, :details, presence: :true
 
   # def self.array_to_json
   #   self.all.map do |s|
