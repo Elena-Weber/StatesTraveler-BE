@@ -1,7 +1,10 @@
 This is Back End for the project States Traveler.
-The Front End is here: https://github.com/Elena-Weber/StatesTraveler-FE
 
-This is a one page application.
+The Front End is here:
+https://github.com/Elena-Weber/StatesTraveler-FE
+
+Video demo is here:
+https://youtu.be/WLQMcfGlIHo
 
 Installation
 
